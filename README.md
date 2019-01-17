@@ -1,5 +1,5 @@
 # AzureIoT-CoreUtils
-Some PowerShell scripts for setting up conatiners on Win 10 IoT-Core
+Some PowerShell scripts for setting up containers on Win 10 IoT-Core
 
 
 >> Nb: On Windows 10 IoT-Core you need a 64 bit version of the OS and so won't current run Containers on the RPI.  I am using a MinnowBoardMax.  I understand (not yet tested) the Dragonboard OS is 64 Bit so should work there as well.
@@ -33,12 +33,14 @@ Install-SecurityDaemon -Manual -ContainerOs Windows
 I have created a couple of scripts to simplify the script's use and added some scripts for logging.
 
 ## PowerShell scripts
-Copy these scripts to (say) c:\iotedge. Then run on the device through the PowerShell portal to the device
+*Usage:* Copy these scripts to (say) c:\iotedge on your IoT-Core device. Then run on the device through the PowerShell portal to the device
 - install.ps1: Installation script to replace Step 2 above
 - uninstall.ps1: Removal script 
 - IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts as per the link from Kelly above.
-- logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5)
-- logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) 
+- logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5) _(Got to implement param)_
+- logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) _(Got to implement param)_
+- loglast5min.ps1: Show log for last 5 minutes
+- loglast30sec.ps1: Show log for last 30 seconds.
 
 
 
