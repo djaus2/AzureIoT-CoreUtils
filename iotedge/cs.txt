@@ -1,0 +1,1 @@
+HostName=myHub101.azure-devices.net;DeviceId=myDevice101;SharedAccessKey=blabla101=

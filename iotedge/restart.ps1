@@ -1,0 +1,2 @@
+\iotedge\uninstall
+\iotedge\install
