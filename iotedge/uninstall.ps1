@@ -1,0 +1,1 @@
+"C:\iotedge\IotEdgeSecurityDaemon.ps1" | Invoke-Expression; Uninstall-SecurityDaemon -DeleteConfig -DeleteMobyDataRoot  -Force

@@ -1,0 +1,1 @@
+"C:\iotedge\IotEdgeSecurityDaemon.ps1" | Invoke-Expression; Install-SecurityDaemon -Manual -ContainerOs Windows
