@@ -33,7 +33,7 @@ Install-SecurityDaemon -Manual -ContainerOs Windows
 I have created a couple of scripts to simplify the script's use and added some scripts for logging.
 
 ## PowerShell scripts
-Copy these scripts to (say) c:\iotedge. Then run on the device through the PowerShell portal to the device
+*Usage:* Copy these scripts to (say) c:\iotedge. Then run on the device through the PowerShell portal to the device
 - install.ps1: Installation script to replace Step 2 above
 - uninstall.ps1: Removal script 
 - IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts as per the link from Kelly above.
