@@ -21,6 +21,7 @@ There was some discussion of this issue with a workaround presented.  The PowerS
 
 Pivotal was this response from Kelly Gremban @kgremban:
 >For unblocking your most recent status update, I've heard from some other users that the current installation bits are buggy on IoT Core. Download [IotEdgeSecurityDaemon.ps1](https://raw.githubusercontent.com/alextnewman/iotedge/3b87d6805fed1e2bdc74dc6f2d3f45cfea328b3e/scripts/windows/setup/IotEdgeSecurityDaemon.ps1) and save it locally on your machine.
+
 And the command to invoke it locally is given by @sergaz-msft at
  https://github.com/MicrosoftDocs/azure-docs/issues/21559#issuecomment-451163574  as
  
