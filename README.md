@@ -1,5 +1,5 @@
 # AzureIoT-CoreUtils
-Some PowerShell scripts for setting up conatiners on Win 10 IoT-Core
+Some PowerShell scripts for setting up containers on Win 10 IoT-Core
 
 
 >> Nb: On Windows 10 IoT-Core you need a 64 bit version of the OS and so won't current run Containers on the RPI.  I am using a MinnowBoardMax.  I understand (not yet tested) the Dragonboard OS is 64 Bit so should work there as well.
