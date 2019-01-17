@@ -42,7 +42,7 @@ Copy these scripts to (say) c:\iotedge. Then run on the device through the Power
 
 
 
-*The following assumes you have established a PowerShell window to the device, eg via IoT Dashboard and copied the scripts to a suitable folder and changed to tha tfolder at the prompt.*
+*The following assumes you have established a PowerShell window to the device, eg via IoT Dashboard and copied the scripts to a suitable folder and changed to that folder at the prompt.*
 
 
 Get the Connection string as per the tutorial documentation, then enter the call to the script eg:
