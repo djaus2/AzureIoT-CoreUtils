@@ -18,14 +18,19 @@ Install-SecurityDaemon -Manual -ContainerOs Windows
 
 There was some discussion of this issue with a workaround presented.  The PowerShell scripts presented here are a formal encapsulation of that solution.
 - [My discussion thread on MS Docs on this issue](https://github.com/MicrosoftDocs/azure-docs/issues/21915)
-Pivotal was this respones form Kelly:
->For unblocking your most recent status update, I've heard from some other users that the current installation bits are buggy on IoT Core. Download [IotEdgeSecurityDaemon.ps1](https://raw.githubusercontent.com/alextnewman/iotedge/3b87d6805fed1e2bdc74dc6f2d3f45cfea328b3e/scripts/windows/setup/IotEdgeSecurityDaemon.ps1) and save it locally on your machine
+Pivotal was this response from Kelly Gremban @kgremban:
+>For unblocking your most recent status update, I've heard from some other users that the current installation bits are buggy on IoT Core. Download [IotEdgeSecurityDaemon.ps1](https://raw.githubusercontent.com/alextnewman/iotedge/3b87d6805fed1e2bdc74dc6f2d3f45cfea328b3e/scripts/windows/setup/IotEdgeSecurityDaemon.ps1) and save it locally on your machine.
+And the commnd to invoke it is presented at
+
+```
+https://github.com/MicrosoftDocs/azure-docs/issues/21559#issuecomment-451163574
+```
 
 ## PowerShell scripts
 Copy these scripts to (say) c:\iotedge. Then run on the device through the PowerShell portal to the device
 - install.ps1: Installation script to replace Step 2 above
 - uninstall.ps1: Removal script 
-- IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts
+- IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts as per the link from Kelly above.
 - logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5)
 - logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) 
 
