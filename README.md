@@ -37,8 +37,8 @@ I have created a couple of scripts to simplify the script's use and added some s
 - install.ps1: Installation script to replace Step 2 above
 - uninstall.ps1: Removal script 
 - IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts as per the link from Kelly above.
-- logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5) _(Got to implement param)_
-- logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) _(Got to implement param)_
+- logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5) 
+- logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) 
 - loglast5min.ps1: Show log for last 5 minutes
 - loglast30sec.ps1: Show log for last 30 seconds.
 
@@ -46,7 +46,7 @@ I have created a couple of scripts to simplify the script's use and added some s
 
 *The following assumes you have established a PowerShell window to the device, eg via IoT Dashboard and copied the scripts to a suitable folder and changed to that folder at the prompt.*
 
-
+### Running the Install script
 Get the Connection string as per the tutorial documentation, then enter the call to the script eg:
 ```
 [192.168.0.26]: PS C:\iotedge> .\install
@@ -60,7 +60,9 @@ Supply values for the following parameters:
 DeviceConnectionString:
 ```
 
-*Enter Connection string here when prompted*
+
+eg ./logmin 5
+   ./logmin 5*Enter Connection string here when prompted*
  
 ```
 The container host is on supported build version 17763.
@@ -107,6 +109,13 @@ edgeAgent        running          Up 39 minutes    mcr.microsoft.com/azureiotedg
 ```
 
 ### Running the Log scripts
+eg
+
+    ./logmin Show log for 5 last 5 minutse
+    ./logsec Show log for last 30 seconds
+    ./loglast5min Show log for last 5 minutes
+    ./loglast30sec: Show log for last 30 seconds.
+   
 
 
 ### Running the UnInstall script
@@ -127,5 +136,5 @@ Successfully uninstalled IoT Edge.
 ## New Container Download (ie Updates)
 I found that when working with the tutorial:
 [Tutorial: Develop a C# IoT Edge module and deploy to your simulated device](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module)
-if I updated my module and attempted an updated download, the update didn't make it to the device. The documentation says that existing modules are stopped and new image/s replace existing containers on the target. I found this didn't happen. Whilst I am looking for a better solution, I found that if I Unistall then Install again and then redeploy, then update make it to the device.
+if I updated my module and attempted an updated download, the update didn't make it to the device. The documentation says that existing modules are stopped and new image/s replace existing containers on the target. I found this didn't happen. Whilst I am looking for a better solution, I found that if I Unistall then Install again and then redeploy, then updates make it to the device.
 
