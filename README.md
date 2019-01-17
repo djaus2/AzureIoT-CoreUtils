@@ -78,7 +78,7 @@ Added IoT Edge registry key.
 Initialized the IoT Edge service.
 ```
 
-** NB: At this stage, the job isn't done! The device is still setting up. Look at the logs until things settle.
+>> NB: At this stage, the job isn't done! The device is still setting up. Look at the logs until things settle.
 
 You should see logs such as 
 
