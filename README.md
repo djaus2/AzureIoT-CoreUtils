@@ -125,5 +125,5 @@ Successfully uninstalled IoT Edge.
 ## New Container Download (ie Updates)
 I found that when working with the tutorial:
 [Tutorial: Develop a C# IoT Edge module and deploy to your simulated device](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module)
-if I updated my module and attempted updated download, the update didn't make it to the device. Whilst I am looking for a better solution, I found that if I Unistall then Install again and then redeploy, then update make it to the device.
+if I updated my module and attempted updated download, the update didn't make it to the device. The documentation says that existing modules are stopped and new image/s replace exsisting containers on the target. Ifound this didn't happen. Whilst I am looking for a better solution, I found that if I Unistall then Install again and then redeploy, then update make it to the device.
 
