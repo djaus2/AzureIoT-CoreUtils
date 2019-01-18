@@ -115,11 +115,12 @@ edgeAgent        running          Up 39 minutes    mcr.microsoft.com/azureiotedg
 ### Running the Log scripts
 eg
 
-    ./log-min Show log for 5 last 5 minutse
-    ./log-sec Show log for last 30 seconds
+```
+    ./log-min 10 Show log for 5 last 10 minutes
+    ./log-sec 20 Show log for last 20 seconds
     ./log-last5min Show log for last 5 minutes
     ./log-last30sec: Show log for last 30 seconds.
-   
+ ```  
 
 
 ### Running the UnInstall script
