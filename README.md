@@ -32,16 +32,23 @@ Install-SecurityDaemon -Manual -ContainerOs Windows
 
 I have created a couple of scripts to simplify the script's use and added some scripts for logging.
 
-## PowerShell scripts
+## PowerShell scripts to be run on IoT-Core Device
 *Usage:* Copy these scripts to (say) c:\iotedge on your IoT-Core device. Then run on the device through the PowerShell portal to the device
 - install.ps1: Installation script to replace Step 2 above
 - uninstall.ps1: Removal script 
 - IotEdgeSecurityDaemon.ps1: This is called by the install and uninstall scripts as per the link from Kelly above.
-- logmin.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5) 
-- logsec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) 
-- loglast5min.ps1: Show log for last 5 minutes
-- loglast30sec.ps1: Show log for last 30 seconds.
+- log-min.ps1: Requires a parameter m, number of minutes. Show log for last m minutes (eg ./logmin 5) 
+- log-sec.ps1: Requires a parameter s, number of seconds. Show log for last s seconds (eg ./logsec 3) 
+- log-last5min.ps1: Show log for last 5 minutes
+- log-last30sec.ps1: Show log for last 30 seconds.
+- log-loop.ps1:  Loops (every 29 secs) dispaly logs for last 30 sec and runs ```iotedge list```
 
+## PowerShell ISE
+Run **PowerShell ISE** on your dev machine as your PS console to your device, rather than PowerShell.  
+It gives you an editor for your scripts.  Use the following script on your dev machine:
+- remoteme.ps1
+
+***Note:*** Edit the $machine variable in the script first
 
 
 *The following assumes you have established a PowerShell window to the device, eg via IoT Dashboard and copied the scripts to a suitable folder and changed to that folder at the prompt.*
@@ -59,10 +66,7 @@ cmdlet Install-SecurityDaemon at command pipeline position 1
 Supply values for the following parameters:
 DeviceConnectionString:
 ```
-
-
-eg ./logmin 5
-   ./logmin 5*Enter Connection string here when prompted*
+*Enter Connection string here when prompted*
  
 ```
 The container host is on supported build version 17763.
@@ -111,10 +115,10 @@ edgeAgent        running          Up 39 minutes    mcr.microsoft.com/azureiotedg
 ### Running the Log scripts
 eg
 
-    ./logmin Show log for 5 last 5 minutse
-    ./logsec Show log for last 30 seconds
-    ./loglast5min Show log for last 5 minutes
-    ./loglast30sec: Show log for last 30 seconds.
+    ./log-min Show log for 5 last 5 minutse
+    ./log-sec Show log for last 30 seconds
+    ./log-last5min Show log for last 5 minutes
+    ./log-last30sec: Show log for last 30 seconds.
    
 
 
