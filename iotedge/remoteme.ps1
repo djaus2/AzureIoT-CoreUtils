@@ -1,6 +1,6 @@
 
 Write-Host Ref: https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/powershell
-$machine =  'minwinpcMax'
+$machine =  '192.168.0.38'
 Write-Host The next command shouldnt be needed
 Write-Host net start WinRM
 Set-Item WSMan:\localhost\Client\TrustedHosts -Value $machine
