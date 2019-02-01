@@ -42,6 +42,15 @@ I have created a couple of scripts to simplify the script's use and added some s
 - log-last5min.ps1: Show log for last 5 minutes
 - log-last30sec.ps1: Show log for last 30 seconds.
 - log-loop.ps1:  Loops (every 29 secs) dispaly logs for last 30 sec and runs ```iotedge list```
+- ftp.ps1: Start ftp daemon on device
+- GetServices.ps1: Get list of running services
+- The next three were trials. Use restart-rm.ps1
+- restart.ps1
+- restart-iotedge.ps1
+- restart-withcs.ps1
+- **restart-rm.ps1: Does quick restart of IoTEdge**
+- dokker.ps1: For docker commands when using moby. Inserts the required npipe.
+
 
 ## PowerShell ISE
 Run **PowerShell ISE** on your dev machine as your PS console to your device, rather than PowerShell.  
@@ -142,4 +151,6 @@ Successfully uninstalled IoT Edge.
 I found that when working with the tutorial:
 [Tutorial: Develop a C# IoT Edge module and deploy to your simulated device](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module)
 if I updated my module and attempted an updated download, the update didn't make it to the device. The documentation says that existing modules are stopped and new image/s replace existing containers on the target. I found this didn't happen. Whilst I am looking for a better solution, I found that if I Unistall then Install again and then redeploy, then updates make it to the device.
+
+_**Simpler**_: Use restart-rm.ps1 as above
 
