@@ -156,9 +156,9 @@ _**Simpler**_: Use restart-rm.ps1 as above
 
 ## Restarting device: IOT-Core
 Another issue has surfaced: **If you reboot an IoT-Core device running Az IoT Edge, the containers don't restart, except, maybe, the Agent**.  From Feedback:
-```
-After installation, all runs fine. But after every reboot the edgeAgent does not find its network anymore and thus fails to start the modules. It looks like the “azure-iot-edge” network is recreated on every docker restart with a different id. But the edge containers do not get notified about this by the daemon.
-```
+
+  After installation, all runs fine. But after every reboot the edgeAgent does not find its network anymore and thus fails to start the modules. It looks like the “azure-iot-edge” network is recreated on every docker restart with a different id. But the edge containers do not get notified about this by the daemon.
+
 
 After reboot just run the **restart-rm.ps1*** script and it will re-pull those containers. NB: The old images are still on the device so some cleanup may be required. It is expected that this issue is to be addressed in an updated image.
 
