@@ -154,3 +154,6 @@ if I updated my module and attempted an updated download, the update didn't make
 
 _**Simpler**_: Use restart-rm.ps1 as above
 
+## Restarting device: IOT-Core
+Another issue has surfaced: **If you reboot an IoT-Core device running Az IoT Edge, the containers don't restart, except, maybe, the Agent**.  After rebbot just run the restart-rm script and it will repool those containers. NB: The old images are still on the device so some cleanup may be required. It is expected that this issue is to be addressed in an updated image.
+
