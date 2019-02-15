@@ -2,7 +2,7 @@
 Some PowerShell scripts for setting up containers on Win 10 IoT-Core
 
 
->> Nb: On Windows 10 IoT-Core you need a 64 bit version of the OS and so won't current run Containers on the RPI.  I am using a MinnowBoardMax.  I understand (not yet tested) the Dragonboard OS is 64 Bit so should work there as well.
+>> Nb: On Windows 10 IoT-Core you need a 64 bit version of the OS and so won't current run Containers on the RPI.  I am using a MinnowBoardMax. I have run the Az Edge container examples on Raspberry PI running Raspian. They might work on an NXP IOT-Core (ARM64) device ??
 
 
 When deploying Azure IoTEdge Containers to a Windows 10 IoT-Core device, the Azure cLI commands need to be a little different to those stated in some of the Azure IoT Hub documentation.  In particular, setting installing and uninstaling requires a local PowerShell script; that is, one copied to the device. I have been working through the tutorials such as:
